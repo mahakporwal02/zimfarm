@@ -29,6 +29,7 @@
 
     <b-button v-show="canRequestTasks"
               v-if="can_request"
+              v-b-tooltip.hover title="Request with normal priority"
               size="sm" variant="info"
               @click.prevent="request_task(cleaned_selected_worker)">
       <font-awesome-icon icon="plus-circle" size="sm" /> Request
@@ -47,6 +48,7 @@
     </b-button>
     <b-button v-show="canRequestTasks"
               v-if="can_fire"
+              v-b-tooltip.hover title="Request with high priority"
               size="sm" variant="warning"
               @click.prevent="request_task(cleaned_selected_worker, true)">
       <font-awesome-icon icon="sort-amount-up" size="sm" /> Request
